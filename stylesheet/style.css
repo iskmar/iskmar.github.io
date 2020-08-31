@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url("/images/background.png");
+    background-image: url("../images/background.png");
     height: 100%;
     width: 100%;
 }
@@ -50,15 +50,15 @@ img {
     left: 0px;
 }
 
-footer {
+/*footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     margin-top: 10%;
     font-size: 20px;
-    background: url("/images/background.png");
+    background: url("../images/background.png");
     opacity: 90%;
-}
+}*/
 .container-fluid {
     margin-bottom: 100px;
     position: relative;
