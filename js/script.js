@@ -461,16 +461,14 @@ function disableForm(boolean) {
 
 // table always printed
 getLocalStorage(inputChecked(fetchInputRadio));
-// let datePrint = document.getElementById('timePrint');
-// console.log(datePrint);
-// let date = new Date();
-// let hours = date.getHours();
-// let minutes = date.getMinutes();
-// let timeOut = document.createTextNode(`${hours} sati : ${minutes} minuta`); 
-// console.log(typeof timeOut);
-// console.log(typeof datePrint);
-// datePrint.value = timeOut;
-// console.log(datePrint);
+
+let ms = window.matchMedia( "(max-width: 960px)" );
+if(ms.matches) {
+    let hardFetch = document.getElementById('hard');
+    let expertFetch = document.getElementById('expert');
+    hardFetch.disabled = true;
+    expertFetch.disabled = true;
+}
 // score buttons css
 // applies css only if clicked
 // when other button is clicked,previous loses classs and therefore css
