@@ -261,6 +261,7 @@ let getBoard = () => {
     // fetchGameTable.style.padding = '5px';
     fetchGameTable.style.margin = '0px auto';
     fetchGameTable.style.borderRadius = '30px';
+    fetchGameTable.classList.add('justify-content-around');
 
     // loop trough array
     for (let i = 0; i < imgArray.length; i++) {
@@ -312,8 +313,8 @@ let getBoard = () => {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '8%';
-                divCard.style.height = '8%';
+                divCard.style.width = '10%';
+                divCard.style.height = '10%';
                 divCard.style.padding = '1px';
                 // console.log('hi');
                 // fetchGameTable.style.padding = '2px';
