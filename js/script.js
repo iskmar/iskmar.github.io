@@ -201,11 +201,11 @@ let checkCards = (card) => {
                     setTimeout(() => {
                         let answer = confirm("Da li zelite novu igru?");
                         if (answer) {
-                            location.reload();
-                            // resetBoard();
-                            // setTimeout(() => {
-                            //     getBoard();
-                            // }, 200);
+                            // location.reload();
+                            resetBoard();
+                            setTimeout(() => {
+                                getBoard();
+                            }, 200);
                         }
                     }, 500);
 
