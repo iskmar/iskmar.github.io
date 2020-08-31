@@ -284,11 +284,9 @@ let getBoard = () => {
             let ma = window.matchMedia( "(max-width: 960px)" );
             if (ma.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '13%';
-                divCard.style.height = '13%';
-                divCard.style.padding = '1px';
-                console.log('hi');
-                // fetchGameTable.style.padding = '2px';
+                divCard.style.width = '14%';
+                divCard.style.height = '14%';
+                // divCard.style.padding = '1px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '60%';
@@ -299,11 +297,9 @@ let getBoard = () => {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '10%';
-                divCard.style.height = '10%';
-                divCard.style.padding = '1px';
-                console.log('hi');
-                // fetchGameTable.style.padding = '2px';
+                divCard.style.width = '11%';
+                divCard.style.height = '11%';
+                // divCard.style.padding = '1px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '70%';
@@ -313,11 +309,8 @@ let getBoard = () => {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '10%';
-                divCard.style.height = '10%';
-                divCard.style.padding = '1px';
-                // console.log('hi');
-                // fetchGameTable.style.padding = '2px';
+                divCard.style.width = '9%';
+                // divCard.style.padding = '1px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '80%';
@@ -329,6 +322,8 @@ let getBoard = () => {
         // set cards css
 
         divCard.classList.add('divCard');
+        // divCard.classList.add('col-2');
+        // divCard.classList.add('justify-content-around');
 
         imgFront.classList.add('imgFront');
         imgFront.setAttribute('src', `images/${imgArray[i]}.png`);
