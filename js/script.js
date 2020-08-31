@@ -296,9 +296,9 @@ let getBoard = () => {
         } else if (count === 64) {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
-                fetchGameTable.style.width = '100%';
-                divCard.style.width = '11%';
-                divCard.style.height = '11%';
+                fetchGameTable.style.width = '120%';
+                divCard.style.width = '13%';
+                divCard.style.height = '13%';
                 // divCard.style.padding = '1px';
             } else {
                 console.log('hello');
@@ -308,8 +308,8 @@ let getBoard = () => {
         } else {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
-                fetchGameTable.style.width = '100%';
-                divCard.style.width = '9%';
+                fetchGameTable.style.width = '120%';
+                divCard.style.width = '11%';
                 // divCard.style.padding = '1px';
             } else {
                 console.log('hello');
@@ -461,7 +461,16 @@ function disableForm(boolean) {
 
 // table always printed
 getLocalStorage(inputChecked(fetchInputRadio));
-
+// let datePrint = document.getElementById('timePrint');
+// console.log(datePrint);
+// let date = new Date();
+// let hours = date.getHours();
+// let minutes = date.getMinutes();
+// let timeOut = document.createTextNode(`${hours} sati : ${minutes} minuta`); 
+// console.log(typeof timeOut);
+// console.log(typeof datePrint);
+// datePrint.value = timeOut;
+// console.log(datePrint);
 // score buttons css
 // applies css only if clicked
 // when other button is clicked,previous loses classs and therefore css
