@@ -279,6 +279,7 @@ let getBoard = () => {
                 divCard.style.height = '20%';
             } else {
                 fetchGameTable.style.width = '60%';
+                divCard.style.width = '20%';
             }
         } else if (count === 36) {
             let ma = window.matchMedia( "(max-width: 960px)" );
@@ -290,7 +291,7 @@ let getBoard = () => {
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '60%';
-                divCard.style.width = '14%';
+                divCard.style.width = '15%';
             }
 
         } else if (count === 64) {
