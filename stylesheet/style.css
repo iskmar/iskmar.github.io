@@ -1,9 +1,86 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
 body {
-    background-color: bisque;
+    background-image: url("/images/background.png");
+    height: 100%;
+    width: 100%;
+}
+
+
+img {
+    border-radius: 10px;
+}
+
+.flipped {
+    visibility: hidden;
+}
+#gameTable {
+    margin-top: 15px;
+    width: 100%;
+    margin-bottom: 73px;
+    position: relative;
+
+}
+#gridDiv {
+    position: relative;
+}
+.divCard {
+    display: inline-block;
+    position: relative;
+    border: 3px solid darkcyan;
+    border-radius: 15px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 20%;
+}
+.imgFront {
+    width: 100%;
+    height: 100%;
+}
+.imgback {
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10%;
+    font-size: 20px;
+    background: url("/images/background.png");
+    opacity: 90%;
+}
+.container-fluid {
+    margin-bottom: 100px;
+    position: relative;
+    min-height: 100vh;
+}
+@media only screen and (min-width: 200px) and (max-width: 960px) {
+    #gridDiv {
+        width: 100%;
+    }
+}
+/* @media only screen and (min-width: 960px) {
+    #gridDiv {
+        width: 90%;
+    }
+} */
+#welcome {  
+    background-image: "url('images/background.png')"; 
+    border-radius:30px;
+    padding: 5px;
+    width: 57vw;
+    height: 57vh;
+    margin: 0px auto;
+    display: flex;
+    vertical-align: center;
 }
