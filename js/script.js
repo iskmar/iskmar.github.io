@@ -269,7 +269,7 @@ let getBoard = () => {
         let divCard = document.createElement('div');
         let imgFront = document.createElement('img');
         let imgBack = document.createElement('img');
-        let screenSize = window.matchMedia("(max-width: 960px)");
+        // let screenSize = window.matchMedia("(max-width: 960px)");
         // set board size depending on count variable(difficulty level)
         if (count === 16) {
             let mq = window.matchMedia( "(max-width: 960px)" );
@@ -287,9 +287,7 @@ let getBoard = () => {
                 fetchGameTable.style.width = '100%';
                 divCard.style.width = '14%';
                 divCard.style.height = '14%';
-                // divCard.style.padding = '1px';
             } else {
-                console.log('hello');
                 fetchGameTable.style.width = '60%';
                 divCard.style.width = '15%';
             }
@@ -301,10 +299,7 @@ let getBoard = () => {
                 divCard.style.width = '11%';
                 divCard.style.height = '11%';
                 divCard.style.padding = '1px';
-                console.log('hi');
-                // fetchGameTable.style.padding = '2px';
             } else {
-                console.log('hello');
                 fetchGameTable.style.width = '70%';
                 divCard.style.width = '11%';
             }
@@ -312,13 +307,10 @@ let getBoard = () => {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '9%';
-                divCard.style.height = '9%';
+                divCard.style.width = '9.5%';
+                divCard.style.height = '9.5%';
                 divCard.style.padding = '1px';
-                // console.log('hi');
-                // fetchGameTable.style.padding = '2px';
             } else {
-                console.log('hello');
                 fetchGameTable.style.width = '80%';
                 divCard.style.width = '9%';
             }
