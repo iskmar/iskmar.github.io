@@ -297,10 +297,12 @@ let getBoard = () => {
         } else if (count === 64) {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
-                fetchGameTable.style.width = '120%';
-                divCard.style.width = '13%';
-                divCard.style.height = '13%';
-                // divCard.style.padding = '1px';
+                fetchGameTable.style.width = '100%';
+                divCard.style.width = '11%';
+                divCard.style.height = '11%';
+                divCard.style.padding = '1px';
+                console.log('hi');
+                // fetchGameTable.style.padding = '2px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '70%';
@@ -309,13 +311,16 @@ let getBoard = () => {
         } else {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
-                fetchGameTable.style.width = '120%';
-                divCard.style.width = '11%';
-                // divCard.style.padding = '1px';
+                fetchGameTable.style.width = '100%';
+                divCard.style.width = '8%';
+                divCard.style.height = '8%';
+                divCard.style.padding = '1px';
+                // console.log('hi');
+                // fetchGameTable.style.padding = '2px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '80%';
-                divCard.style.width = '8%';
+                divCard.style.width = '8.5%';
             }
         }
             
