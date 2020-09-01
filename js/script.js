@@ -199,7 +199,7 @@ let checkCards = (card) => {
                     // delay 500 ms and reload if confirmed
                     // else leave the game in state when finished
                     setTimeout(() => {
-                        let answer = confirm("Da li zelite novu igru?");
+                        let answer = confirm("PLay new game?");
                         if (answer) {
                             // location.reload();
                             resetBoard();
@@ -238,7 +238,7 @@ let checkCards = (card) => {
 let saveNameStorage = (name) => {
     let inputName = name.value;
     if (!inputName || inputName === "") {
-        alert("Molimo vas unesite sve podatke");
+        alert("Please enter name to continue");
     } else {
         localStorage.setItem('currentUser', inputName);
         return localStorage.getItem('currentUser').toUpperCase();
@@ -517,7 +517,7 @@ form.addEventListener('submit', event => {
 btnStartGame.addEventListener('click', () => {
     // dont start game if input field is empty
     if (fetchInputName.value === '' || fetchInputName.value === null) {
-        alert("Molimo vas unesite sve podatke");
+        alert("Please enter your name to continue");
     } else {
         // if game already finished
         // reset the board
