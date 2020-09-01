@@ -199,7 +199,7 @@ let checkCards = (card) => {
                     // delay 500 ms and reload if confirmed
                     // else leave the game in state when finished
                     setTimeout(() => {
-                        let answer = confirm("PLay new game?");
+                        let answer = confirm("Play new game?");
                         if (answer) {
                             // location.reload();
                             resetBoard();
