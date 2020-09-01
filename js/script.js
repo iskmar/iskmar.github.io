@@ -306,21 +306,21 @@ let getBoard = () => {
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '70%';
-                divCard.style.width = '10%';
+                divCard.style.width = '11%';
             }
         } else {
             let ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
-                divCard.style.width = '8%';
-                divCard.style.height = '8%';
+                divCard.style.width = '9%';
+                divCard.style.height = '9%';
                 divCard.style.padding = '1px';
                 // console.log('hi');
                 // fetchGameTable.style.padding = '2px';
             } else {
                 console.log('hello');
                 fetchGameTable.style.width = '80%';
-                divCard.style.width = '8.5%';
+                divCard.style.width = '9%';
             }
         }
             
