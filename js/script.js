@@ -23,7 +23,7 @@ let time = document.getElementById('timer');
 
 let moves = document.getElementById('moves');
 let btnStartGame = document.getElementById('button');
-let inputCreate = document.createElement('input');
+// let inputCreate = document.createElement('input');
 let btnTable = document.querySelectorAll("button[name='tableButtons']");
 let imgArray = [];
 let openedCards = 0;
@@ -88,9 +88,9 @@ let getLocalStorage = (diff) => {
 
         for (let i = 0; i < newArray.length; i++) {
             countRows++;
-            let tblRow = document.createElement("tr");;
+            let tblRow = document.createElement("tr");
             let username = newArray[i].username;
-            let time = newArray[i].time;
+            time = Array[i].time;
             let movesCount = newArray[i].moves;
             
             let tblData1 = document.createElement("td");
@@ -141,14 +141,14 @@ let setTableStorage = (diff) => {
         getPlayers.sort((a, b) => parseFloat(a.time) - parseFloat(b.time));
 
         for (let i = 0; i < getPlayers.length; i++) {
-            highestTime = getPlayers[0].time;
+            let highestTime = getPlayers[0].time;
             if (highestTime < getPlayers[i].time) {
                 highestTime = getPlayers[i].time;
             }
         }
         if (getPlayers.length > 4) {
             if (player.time < highestTime) {
-                getPlayers.pop(highestTime);
+                getPlayers.pop();
                 getPlayers.push(player)
             }
         } else {
@@ -293,7 +293,7 @@ let getBoard = () => {
             }
 
         } else if (count === 64) {
-            let ms = window.matchMedia( "(max-width: 960px)" );
+            ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
                 divCard.style.width = '11%';
@@ -304,7 +304,7 @@ let getBoard = () => {
                 divCard.style.width = '11%';
             }
         } else {
-            let ms = window.matchMedia( "(max-width: 960px)" );
+            ms = window.matchMedia( "(max-width: 960px)" );
             if (ms.matches) {
                 fetchGameTable.style.width = '100%';
                 divCard.style.width = '9.5%';
@@ -447,7 +447,7 @@ let startGameTimer = () => {
 
 // disable input field on form submit
 function disableForm(boolean) {
-    inputName.disabled = boolean;
+    fetchInputName.disabled = boolean;
     // btnSubmitName.disabled = boolean;
 }
 //////////////////////////////////////////////////////    FUNCTIONS   //////////////////////////////////////////////////////
@@ -485,8 +485,6 @@ for (let i = 0; i < btnTable.length; i++) {
 //////////////////////////////////////////////////////    FUNCTION CALLS  //////////////////////////////////////////////////////
 
 
-
-
 //////////////////////////////////////////////////////    EVENT LISTENERS   //////////////////////////////////////////////////////
 
 // event listener on enter
@@ -497,6 +495,7 @@ form.addEventListener('submit', event => {
     // checks if input field is empty
     // if empty, do nothing and throw alert from previusly called function that stores names
     if (fetchInputName.value === '' || fetchInputName.value === null) {
+        return;
     } else {
         disableForm(true);
         resetBoard();
