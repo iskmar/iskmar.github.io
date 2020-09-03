@@ -379,6 +379,7 @@ let shuffleArray = (array) => {
 // rather than reloading page
 // reset all the settings to how they were when game started
 let resetBoard = () => {
+    let time = document.getElementById('timer');
     fetchGameTable.innerHTML = '';
     fetchGameTable.style = 'none';
     let allDivs = document.querySelectorAll('div');
@@ -433,6 +434,7 @@ let getLevelValue = (array) => {
 // called on first click of the game
 // print out results
 let startGameTimer = () => {
+    let time = document.getElementById('timer');
     if (timer === null) {
         timer = setInterval(() => {
             countTime++;
@@ -495,9 +497,9 @@ form.addEventListener('submit', event => {
     // checks if input field is empty
     // if empty, do nothing and throw alert from previusly called function that stores names
     if (fetchInputName.value === '' || fetchInputName.value === null) {
-        return;
+        alert("Please enter your name to continue");
     } else {
-        disableForm(true);
+        // disableForm(true);
         resetBoard();
         // startScreenWelcome();
     }
