@@ -90,7 +90,7 @@ let getLocalStorage = (diff) => {
             countRows++;
             let tblRow = document.createElement("tr");
             let username = newArray[i].username;
-            time = Array[i].time;
+            time = newArray[i].time;
             let movesCount = newArray[i].moves;
             
             let tblData1 = document.createElement("td");
