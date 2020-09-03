@@ -141,7 +141,7 @@ let setTableStorage = (diff) => {
         getPlayers.sort((a, b) => parseFloat(a.time) - parseFloat(b.time));
 
         for (let i = 0; i < getPlayers.length; i++) {
-            let highestTime = getPlayers[0].time;
+            highestTime = getPlayers[0].time;
             if (highestTime < getPlayers[i].time) {
                 highestTime = getPlayers[i].time;
             }
