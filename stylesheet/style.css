@@ -35,7 +35,7 @@ ul li {
 body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
 }
-h1 {
+#intro_name {
     color: white;
     /*color:red;*/
     font-size: 90px;
@@ -44,12 +44,31 @@ h1 {
 #front_title {
     color: #57DDFF;
     font-size: 45px;
+    margin: 0;
+    padding: 0;
 }
 #intro_text {
     color: #57DDFF;
     font-size: 22px;
+    margin: 0;
 }
 #left {
     backdrop-filter: blur(45px);
     top: 40px;
+}
+/*img {*/
+/*    width: 60%;*/
+
+/*}*/
+
+@media only screen and (min-width: 200px) and (max-width: 768px) {
+    #intro_name {
+        font-size: 60px;
+    }
+    #front_title {
+        font-size: 25px;
+    }
+    #intro_text {
+        font-size: 17px;
+    }
 }
