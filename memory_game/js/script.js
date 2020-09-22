@@ -346,7 +346,7 @@ let getBoard = () => {
         });
         // event lister on foreground image
         // calls function that checks the cards
-        imgBack.addEventListener('click', () => {
+        imgBack.addEventListener('click', function() {
             checkCards(this);
         });
     }
