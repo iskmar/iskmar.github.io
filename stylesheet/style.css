@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#intro, #projects, #contact {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid blue;
+}
+#intro {
+    top: 40px;
+}
+#nav a {
+    color: #57DDFF;
+    text-decoration: none;
+}
+#nav a:hover {
+    color: #57DDFF;
+    border-bottom: 2px solid crimson;
+}
+#nav a:active {
+    border-bottom: 2px solid crimson;
+}
+#nav {
+    z-index:10;
+    background:inherit;
+    overflow: hidden;
+}
+ul li {
+    list-style-type: none;
+    align-items: center;
+}
+body {
+    background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
+}
+h1 {
+    color: white;
+    /*color:red;*/
+    font-size: 90px;
+    font-weight: bolder;
+}
+#front_title {
+    color: #57DDFF;
+    font-size: 45px;
+}
+#intro_text {
+    color: #57DDFF;
+    font-size: 22px;
+}
+#left {
+    backdrop-filter: blur(45px);
+    top: 40px;
+}
