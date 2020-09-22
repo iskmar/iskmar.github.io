@@ -129,7 +129,7 @@ let setTableStorage = (diff) => {
     }
     // check to see if key already exists
     // if not, set new one with current player settings
-    if (!localStorage.getItem(`${di+ff}`)) {
+    if (!localStorage.getItem(`${diff}`)) {
         playerStorageSet.push(player);
         localStorage.setItem(`${diff}`, JSON.stringify(playerStorageSet));
     } else {
