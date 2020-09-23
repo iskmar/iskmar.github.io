@@ -1,8 +1,0 @@
-
-:
-
-index.html,f/6/f6013a00b362253c64368d6eebc50ea2131754e2
-<
-js/script.js,4/d/4da5ceae6496884a1f0713d787ace4de5a398774
-D
-stylesheet/style.css,8/4/840c6108454bb79492f81627f1f6052174490bb2
