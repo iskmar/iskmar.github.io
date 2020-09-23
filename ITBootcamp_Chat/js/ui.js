@@ -1,6 +1,3 @@
-// import { snapshotDataChange } from "../modules/functions";
-// import { Chatroom } from "../classes/chat.js";
-
 export class ChatUI {
 	constructor (list) {
 		this.chat = list;
@@ -54,6 +51,9 @@ export class ChatUI {
 			this.chat.innerHTML += chat;
 		}
 
-
+		window.addEventListener('load', (event) => {
+			event.preventDefault();
+			console.log('page is fully loaded');
+		});
 	}
 }

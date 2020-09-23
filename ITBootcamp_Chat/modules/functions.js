@@ -20,4 +20,7 @@ let getMessages = (obj,obj1) => {
 		obj1.templateUI(data);
 	})
 }
-export { getMessages, getRoomId , checkName};
+let loadChat = () => {
+	document.getElementById('general').click();
+}
+export { getMessages, getRoomId , checkName, loadChat};

@@ -1,5 +1,5 @@
 import { Chatroom } from "../classes/chat.js";
-import { getMessages, getRoomId, checkName} from "../modules/functions.js";
+import { getMessages, getRoomId, checkName, loadChat} from "../modules/functions.js";
 import { ChatUI } from "./ui.js";
 let form_message = document.getElementById('form_message');
 let form_name = document.getElementById('form_name');
@@ -48,4 +48,8 @@ form_message.addEventListener('submit', event => {
 			});
 	}
 
+});
+window.addEventListener('load', (event) => {
+	event.preventDefault();
+	loadChat();
 });
