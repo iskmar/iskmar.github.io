@@ -49,7 +49,6 @@ form_message.addEventListener('submit', event => {
 	}
 
 });
-window.addEventListener('load', (event) => {
-	event.preventDefault();
+window.addEventListener('load', () => {
 	loadChat();
 });
