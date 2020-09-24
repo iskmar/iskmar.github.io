@@ -3,7 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body {
+    background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
+}
 #intro, #projects, #contact {
     width: 100vw;
     height: 100vh;
@@ -33,9 +35,7 @@ ul li {
     list-style-type: none;
     align-items: center;
 }
-body {
-    background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
-}
+
 #intro_name {
     color: white;
     /*color:red;*/
