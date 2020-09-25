@@ -8,12 +8,10 @@ html {
 }
 body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
-    height: 100%;
 }
-#intro, #projects, #contact {
+#intro, #projects {
     width: 100vw;
     min-height: 100vh;
-    border: 1px solid blue;
 }
 #intro {
     top: 40px;
@@ -21,13 +19,6 @@ body {
 #nav a {
     color: #57DDFF;
     text-decoration: none;
-}
-#nav a:hover {
-    color: #57DDFF;
-    border-bottom: 2px solid crimson;
-}
-#nav a:active {
-    border-bottom: 2px solid crimson;
 }
 #nav {
     z-index:10;
@@ -47,7 +38,6 @@ ul li {
     border-bottom: 2px solid crimson;
 
 }
-
 #intro_name {
     color: white;
     /*color:red;*/
@@ -110,5 +100,5 @@ ul li {
     text-align: center;
 }
 .active {
-    border-bottom: 2px solid crimson;
+    border-bottom: 1px solid crimson;
 }
