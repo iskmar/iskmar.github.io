@@ -45,16 +45,38 @@ export class Chatroom {
 
 	}
 	async getChats ( cb ) {
+			this.unsub = this.chats
+				.where( 'room', '==', this.room )
+				.orderBy( 'created_at', 'asc' )
+				.onSnapshot( snapshot => {
+					snapshot.docChanges().forEach( change => {
+						let type = change.type;
+						let doc = change.doc;
+						if ( type === 'added' ) {
+							// let obj = doc;
+							cb( doc );
+
+						}
+					} )
+				} )
+	}
+
+	async getFilterChats ( cb ) {
+		let startDate = document.getElementById('start_date');
+		let endDate = document.getElementById('end_date');
 		this.unsub = this.chats
 			.where( 'room', '==', this.room )
+			.where('created_at', '>=', startDate.value)
+			.where('created_at', '<=', endDate.value)
 			.orderBy( 'created_at', 'asc' )
 			.onSnapshot( snapshot => {
 				snapshot.docChanges().forEach( change => {
 					let type = change.type;
 					let doc = change.doc;
 					if ( type === 'added' ) {
-						let obj = doc.data();
-						cb( obj );
+						// let obj = doc;
+						cb( doc );
+						console.log(startDate.value);
 
 					}
 				} )

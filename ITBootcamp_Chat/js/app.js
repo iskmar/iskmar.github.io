@@ -1,11 +1,23 @@
 import { Chatroom } from "../classes/chat.js";
-import { getMessages, getRoomId, checkName, loadChat} from "../modules/functions.js";
+import { getMessages, getRoomId, checkName, loadChat, deleteMessages, getFilterMessages} from "../modules/functions.js";
 import { ChatUI } from "./ui.js";
 let form_message = document.getElementById('form_message');
 let form_name = document.getElementById('form_name');
 let name_field = document.getElementById('name_field');
 let ul = document.getElementById('chatUl');
 let buttons = document.getElementsByClassName('room');
+let submitDate = document.getElementById('submit_date');
+let startDate = document.getElementById('start_date');
+let endDate = document.getElementById('end_date');
+
+submitDate.addEventListener('click', event => {
+  event.preventDefault();
+	ul.innerHTML = '';
+	console.log(startDate.value,endDate.value);
+	// console.log(startDate.value);
+  getFilterMessages(chatMsg,writeChat)
+
+});
 
 let room = getRoomId(buttons);
 checkName();
@@ -57,3 +69,12 @@ form_message.addEventListener('submit', event => {
 window.addEventListener('load', () => {
 	loadChat();
 });
+
+
+let btnDelete = document.querySelectorAll('btnDelete');
+
+btnDelete.forEach(btn => {
+	btn.addEventListener('click', event => {
+		deleteMessages(chatMsg,writeChat);
+	})
+})

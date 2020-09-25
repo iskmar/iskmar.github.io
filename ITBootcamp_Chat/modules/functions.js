@@ -16,11 +16,21 @@ let getRoomId = (buttons) => {
 	}
 }
 let getMessages = (obj,obj1) => {
+	obj.getChats((data) => {
+		obj1.templateUI(data);
+	})
+}
+let deleteMessages = (obj,obj1) => {
 	obj.getChats(data => {
+		obj1.msgDelete(data);
+	})
+}
+let getFilterMessages = (obj,obj1) => {
+	obj.getFilterChats(data => {
 		obj1.templateUI(data);
 	})
 }
 let loadChat = () => {
 	document.getElementById('general').click();
 }
-export { getMessages, getRoomId , checkName, loadChat};
+export { getMessages, getRoomId , checkName, loadChat,deleteMessages, getFilterMessages};

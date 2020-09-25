@@ -37,12 +37,18 @@
 
 		<div id = "form" >
 			<form id = "form_message" action = "" >
-				<input id = "message_field" class="input_field col-12" type = "text" placeholder="Enter your message here" >
+<!--				<input id = "message_field" class="input_field col-12" type = "text" placeholder="Enter your message here" >-->
+				<textarea name = "" class="input_field col-12" id = "message_field" cols = "10" rows = "2" placeholder="Enter your message here"></textarea >
 <!--				<input id = "btn_sndMessage" class = "form_btn col-1" type = "submit" value = "Send" >-->
 			</form >
 			<form id = "form_name" action = "" >
 				<input id = "name_field" class="input_field col-12" type = "text" placeholder="Enter your name here">
 <!--				<input id = "btn_sndName" class = "form_btn col-1" type = "submit" value = "Name" >-->
+			</form >
+			<form action = "" id="chat_filter_form" >
+				<input type = "date" id="start_date">
+				<input type = "date" id="end_date">
+				<input type = "submit" id="submit_date" value="Set Dates">
 			</form >
 		</div >
 	</div >
@@ -69,6 +75,6 @@
 	firebase.initializeApp( firebaseConfig );
 	let db = firebase.firestore();
 </script >
-<script type = "module" src = "js/app.js" ></script >
+<script type = "module" src = "./js/app.js" ></script >
 </body >
 </html >
