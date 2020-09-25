@@ -3,12 +3,16 @@
     margin: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
+    height: 100%;
 }
 #intro, #projects, #contact {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid blue;
 }
 #intro {
@@ -35,6 +39,14 @@ ul li {
     list-style-type: none;
     align-items: center;
 }
+#nav li:hover {
+    border-bottom: 2px solid crimson;
+
+}
+#nav li:active {
+    border-bottom: 2px solid crimson;
+
+}
 
 #intro_name {
     color: white;
@@ -57,10 +69,6 @@ ul li {
     backdrop-filter: blur(45px);
     top: 40px;
 }
-/*img {*/
-/*    width: 60%;*/
-
-/*}*/
 
 @media only screen and (min-width: 200px) and (max-width: 768px) {
     #intro_name {
@@ -72,4 +80,35 @@ ul li {
     #intro_text {
         font-size: 17px;
     }
+}
+#projects {
+    /*position: relative;*/
+    display: flex;
+    justify-content: space-around;
+
+}
+.projects-img img{
+    width: 100%;
+    height: 40%;
+    top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.projects-img:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+.project-card-desc {
+    padding: 2px 16px;
+}
+#project_one {
+    color: white;
+    text-align: center;
+}
+#project_two {
+    color: white;
+    text-align: center;
+}
+.active {
+    border-bottom: 2px solid crimson;
 }
