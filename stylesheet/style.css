@@ -3,13 +3,34 @@
     margin: 0;
     box-sizing: border-box;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+    margin-right: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: orange;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: orangered;
+}
 html {
     scroll-behavior: smooth;
 }
 body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
+    font-family: sans-serif;
 }
-#intro, #projects {
+#intro, #projects, #contact {
     min-height: 100vh;
 }
 #intro {
@@ -24,7 +45,7 @@ body {
 }
 
 #nav a {
-    color: #57DDFF;
+    color: orange;
     text-decoration: none;
 }
 
@@ -53,7 +74,7 @@ ul li {
     padding: 0;
 }
 #intro_text {
-    color: yellow;
+    color: orange;
     font-size: 22px;
     margin: 0;
 }
@@ -104,11 +125,164 @@ ul li {
 }
 @media only screen and (min-width: 200px) and (max-width: 992px) {
     .projects-img {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 4px 16px 2px rgba(255,165,0,0.5);
+        /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);*/
     }
 }
 @media only screen and (min-width: 992px) {
     .projects-img:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+        box-shadow: 0 4px 16px 2px rgba(255,165,0,0.5);
     }
+}
+
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#left-contact {
+    justify-content: center;
+    padding: 0 40px;
+}
+#left-contact h3, h1 {
+    color: orange;
+    margin-bottom: 30px;
+}
+
+.form {
+    height: 70px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(45px);
+    margin-bottom: 40px;
+}
+.form input {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 10px;
+    border: none;
+    margin-bottom: 40px;
+    outline: none;
+}
+.form textarea {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 60px;
+    margin-top: 40px;
+    border: none;
+    outline: none;
+}
+.form_message {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    height: 150px;
+}
+.form label {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid orange;
+}
+.form label::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid orangered;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+.span_name {
+    position: absolute;
+    bottom: 5px;
+    margin-left: 10px;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.form input:focus + .name_label .span_name,
+.form input:valid + .name_label .span_name {
+    transform: translateY(-100%);
+    font-size: 20px;
+    color: orangered;
+}
+.form textarea:focus + .name_label .span_name,
+.form textarea:valid + .name_label .span_name {
+    transform: translateY(-350%);
+    font-size: 20px;
+    color: orangered;
+}
+
+.form input:focus + .name_label::after,
+.form input:valid + .name_label::after {
+    transform: translateX(0%);
+}
+.form textarea:focus + .name_label::after,
+.form textarea:valid + .name_label::after {
+    transform: translateX(0%);
+}
+
+#form_submit {
+    background-color: transparent;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 10px;
+    /*align-content: center;*/
+    text-align: center;
+    left: 50%;
+}
+#form_submit:focus {
+    outline: none;
+    color: orangered;
+}
+form {
+    justify-content: center;
+    align-content: center;
+}
+
+#right-contact {
+    /*border: 1px solid orangered;*/
+    justify-content: center;
+    /*height: 600px;*/
+    padding: 0 40px;
+
+}
+.links>* {
+    color: orange;
+}
+.link > * {
+    font-size: 25px;
+}
+.link span {
+    margin-left: 20px;
+    color: orange;
+}
+.link {
+    display: block;
+    color: orange;
+    padding-left: 50px;
+    /*text-align: right;*/
+}
+.link span, .link i {
+    font-size: 40px;
+}
+.links h2 {
+    padding-left: 50px;
+    padding-bottom: 50px ;
+}
+.link a {
+    text-decoration: none;
+    color: orange;
 }

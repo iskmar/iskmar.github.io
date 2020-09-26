@@ -19,7 +19,7 @@
 		<ul class="row no-gutters justify-content-center">
 			<li class="nav-list"><a href = "#intro" class="nav-link" >About</a ></li >
 			<li class="nav-list"><a href = "#projects" class="nav-link" >Projects</a ></li >
-<!--			<li class="nav-list"><a href = "#contact" class="nav-link" >Contact</a ></li >-->
+			<li class="nav-list"><a href = "#contact" class="nav-link" >Contact</a ></li >
 		</ul>
 	</div>
 	<div id="intro" class="row no-gutters align-content-center">
@@ -72,14 +72,65 @@
 			</div>
 		</div>
 	</div>
-<!--	<div id="contact">-->
-<!--		<div id="left-contact">-->
-<!--			<form action = "" >-->
+	<div id="contact" class="row no-gutters">
+		<div id="left-contact" class="col-12 col-lg-6">
+			<h1>Get in touch with me</h1>
+			<h3>Send a message and I'll respond asap</h3>
+			<form action = "" class="justify-content-center">
+				<div class="form">
+					<input type = "text" name="name" class="form_name" autocomplete="off" required >
+					<label for = "name" class="name_label" >
+						<span class="span_name">Name</span>
+					</label >
+				</div>
+				<div class="form">
+					<input type = "email" name="name" class="form_name" autocomplete="off" required >
+					<label for = "" class="name_label" >
+						<span class="span_name">Email</span>
+					</label>
+				</div>
+				<div class="form form_message">
+					<textarea name = "message" class = "form_name form_text" required  ></textarea >
+<!--					<input type = "text" name="message" class="form_name form_message" autocomplete="off" required>-->
+					<label for = "message" class="name_label text_label" >
+						<span class="span_name span_text">Message</span>
+					</label>
+				</div>
+				<input type = "submit" id="form_submit" class="col-auto mx-auto" value="Submit" >
+			</form >
+		</div>
+		<div id="right-contact" class="col-12 col-lg-6">
+			<div class="links">
+				<h2>You can also stay in touch via bellow links</h2>
+				<div class="link github">
+					<a href = "https://github.com/iskmar" target="_blank">
+						<i class="fab fa-github"></i>
+					</a >
+					<a href = "https://github.com/iskmar" target="_blank">
+						<span>Github</span>
+					</a >
+				</div>
+				<div class="link linkedin">
+					<a href = "https://www.linkedin.com/in/iskmar/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a >
+					<a href = "https://www.linkedin.com/in/iskmar/" target="_blank">
+						<span>linkedin</span>
+					</a >
+				</div>
+<!--				<div class="link website">-->
+<!--					<a href = "" >-->
+<!--						<i class="fas fa-globe"></i>-->
+<!--					</a >-->
+<!--					<a href = "" >-->
+<!--						<span>iskmargithub</span>-->
+<!--					</a >-->
+<!--				</div>-->
 
-<!--			</form >-->
-<!--		</div>-->
-<!--		<div id="right-contact"></div>-->
-<!--	</div>-->
+			</div>
+		</div>
+	</div>
+
 	<div id="footer"></div>
 </div>
 
