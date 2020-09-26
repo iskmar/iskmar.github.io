@@ -10,22 +10,25 @@ body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
 }
 #intro, #projects {
-    width: 100vw;
+    /*width: 100vw;*/
     min-height: 100vh;
 }
 #intro {
     top: 40px;
 }
-#nav a {
-    color: #57DDFF;
-    text-decoration: none;
-}
+
 #nav {
     z-index:10;
     background:inherit;
     overflow: hidden;
     margin: 0;
 }
+
+#nav a {
+    color: #57DDFF;
+    text-decoration: none;
+}
+
 ul li {
     list-style-type: none;
     align-items: center;
@@ -78,7 +81,7 @@ ul li {
 
 }
 .projects-img img{
-    width: 100%;
+    width: 90%;
     height: 40%;
     top: 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
