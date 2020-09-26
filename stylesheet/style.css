@@ -10,7 +10,6 @@ body {
     background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
 }
 #intro, #projects {
-    /*width: 100vw;*/
     min-height: 100vh;
 }
 #intro {
@@ -84,13 +83,11 @@ ul li {
     width: 90%;
     height: 40%;
     top: 50px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
-    margin-top: 10px;
+    margin-top: 15px;
 }
-.projects-img:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-}
+
 .project-card-desc {
     padding: 2px 16px;
 }
@@ -104,4 +101,14 @@ ul li {
 }
 .active {
     border-bottom: 1px solid crimson;
+}
+@media only screen and (min-width: 200px) and (max-width: 992px) {
+    .projects-img {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    }
+}
+@media only screen and (min-width: 992px) {
+    .projects-img:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    }
 }
