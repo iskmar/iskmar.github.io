@@ -95,30 +95,41 @@ ul li {
     }
 }
 #projects {
-    /*position: relative;*/
     display: flex;
     justify-content: space-around;
 
 }
+.projects {
+    display: flex;
+    align-content: center;
+}
 .projects-img img{
     width: 90%;
-    height: 40%;
     top: 50px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
     transition: 0.3s;
     margin-top: 15px;
 }
-
+.projects-img a {
+    color: orange;
+}
 .project-card-desc {
     padding: 2px 16px;
 }
 #project_one {
     color: white;
     text-align: center;
+    align-items: center;
+    border-radius: 20px;
+
+
 }
 #project_two {
     color: white;
     text-align: center;
+    align-items: center;
+    border-radius: 20px;
+
 }
 .active {
     border-bottom: 1px solid crimson;
@@ -126,7 +137,11 @@ ul li {
 @media only screen and (min-width: 200px) and (max-width: 992px) {
     .projects-img {
         box-shadow: 0 4px 16px 2px rgba(255,165,0,0.5);
+        margin: 30px 0;
         /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);*/
+    }
+    #contact {
+        margin-top: 40px;
     }
 }
 @media only screen and (min-width: 992px) {
