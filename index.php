@@ -19,6 +19,7 @@
         <li class="nav-list"><a href="#intro" class="nav-link">About</a></li>
         <li class="nav-list"><a href="#projects" class="nav-link">Projects</a></li>
         <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
+        <li class="nav-list"><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
 </div>
 <div class="container-fluid">
