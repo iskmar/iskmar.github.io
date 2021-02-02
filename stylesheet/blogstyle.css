@@ -1,27 +1,30 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: #F5F5F5;
-}
+/** {*/
+/*    padding: 0;*/
+/*    margin: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
 .nav {
     border: 1px solid black;
     height: 60px;
     margin: 5px 5px;
+    background-color: #F5F5F5;
+
+}
+ul li {
+    list-style-type: none;
+    /*align-items: center;*/
 }
 .intro-pic {
     /*width: 100%;*/
     height: 350px;
     border: 1px solid orangered;
     margin: 5px 5px;
+    background: url('../images/keyboards-dark.jpg') no-repeat center fixed;
 }
 .main {
     border: 1px solid green;
+    background-color: #F5F5F5;
     height: 1000px;
     margin: 5px 5px;
-}
-.nav, .intro-pic, .main, .threads, .list {
-    background-color: white;
 }
